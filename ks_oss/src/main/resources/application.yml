@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: ks-oss
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 39.107.88.175:8848
+server:
+  port: 8005
+#阿里云 OSS
+aliyun:
+  oss:
+    file:
+      endpoint: oss-cn-beijing.aliyuncs.com
+      keyid: LTAI5tJs5EKVtSWpx1E9RyRr
+      keysecret: Wjlt5oCrjKXgD3Ja0yJZlP1Kg8EGwB
+      bucketname: edu-guli-97
+
+
+

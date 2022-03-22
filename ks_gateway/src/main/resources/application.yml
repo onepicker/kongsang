@@ -1,0 +1,49 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 39.107.88.175:8848
+    gateway:
+      routes:
+        - id: buy_route
+          uri: lb://ks-buy
+          predicates:
+            - Path=/buy/**
+
+        - id: search_route
+          uri: lb://ks-search
+          predicates:
+            - Path=/search/**
+#          filters:
+#            - RewritePath=/search(?<segment>/?.*), /$\{segment}
+        - id: oss_route
+          uri: lb://ks-oss
+          predicates:
+            - Path=/oss/**
+#          filters:
+#            #            - RewritePath=/api/mallproduct(?<segment>/?.*), /mallproduct$\{segment}
+#            - RewritePath=/api(?<segment>/?.*), /$\{segment}
+        - id: freezer_route
+          uri: lb://ks-freezer
+          predicates:
+            - Path=/freezer/**
+
+        - id: member_route
+          uri: lb://ks-member
+          predicates:
+            - Path=/member/**
+
+        - id: vod_route
+          uri: lb://ks-vod
+          predicates:
+            - Path=/vod/**
+
+        - id: community_route
+          uri: lb://ks-community
+          predicates:
+            - Path=/community/**
+
+  application:
+    name: ks-gateway
+server:
+  port: 9001

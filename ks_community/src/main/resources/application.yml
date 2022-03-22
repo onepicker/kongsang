@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: ks-community
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 39.107.88.175:8848
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://39.107.88.175:3306/kongsang
+    username: root
+    password: root
+server:
+  port: 8002

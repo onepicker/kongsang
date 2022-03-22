@@ -1,0 +1,25 @@
+server:
+  port: 8007
+
+spring:
+  application:
+    name: ks-vod
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 39.107.88.175:8848
+  servlet:
+    multipart:
+      max-file-size: 1024MB
+      max-request-size: 1024MB
+
+#??? vod
+aliyun:
+  vod:
+    file:
+      keyid: LTAI5tJs5EKVtSWpx1E9RyRr
+      keysecret: Wjlt5oCrjKXgD3Ja0yJZlP1Kg8EGwB
+
+
+
+
