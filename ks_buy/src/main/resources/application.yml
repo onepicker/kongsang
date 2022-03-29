@@ -12,3 +12,10 @@ spring:
     password: root
 server:
   port: 8001
+
+
+mybatis-plus:
+  mapper-locations: classpath:com/ks/member/mapper/xml/*.xml
+  global-config:
+    db-config:
+      id-type: auto

@@ -1,4 +1,4 @@
-package com.ks.freezer;
+package com.ks.buy;
 
 import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.annotation.IdType;
@@ -14,7 +14,6 @@ import org.junit.Test;
 public class getCode {
     @Test
     public void main1() {
-
         // 1、创建代码生成器
         AutoGenerator mpg = new AutoGenerator();
 
@@ -24,7 +23,7 @@ public class getCode {
         System.out.println(projectPath);
         //本人模块
         // TODO
-        gc.setOutputDir("D:\\2824464652698624\\kongsang\\ks_freezer" + "/src/main/java");
+        gc.setOutputDir("D:\\2824464652698624\\kongsang\\ks_buy" + "/src/main/java");
         gc.setAuthor("dCoder");
         gc.setOpen(false); //生成后是否打开资源管理器
         gc.setFileOverride(true); //重新生成时文件是否覆盖
@@ -53,7 +52,7 @@ public class getCode {
 
         pc.setParent("com.ks");
         //TODO 配置自己的模块名
-        pc.setModuleName("freezer"); //模块名
+        pc.setModuleName("buy"); //模块名
 
         pc.setController("controller");
         pc.setEntity("entity");
@@ -64,7 +63,7 @@ public class getCode {
         // 5、策略配置
         StrategyConfig strategy = new StrategyConfig();
         //TODO  所需要生成的表的表名
-        strategy.setInclude("acl_user");
+        strategy.setInclude("goods");
         strategy.setNaming(NamingStrategy.underline_to_camel);//数据库表映射到实体的命名策略
         strategy.setTablePrefix(pc.getModuleName() + "_"); //生成实体时去掉表前缀
 

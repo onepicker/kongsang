@@ -20,9 +20,7 @@ spring:
           uri: lb://ks-oss
           predicates:
             - Path=/oss/**
-#          filters:
-#            #            - RewritePath=/api/mallproduct(?<segment>/?.*), /mallproduct$\{segment}
-#            - RewritePath=/api(?<segment>/?.*), /$\{segment}
+
         - id: freezer_route
           uri: lb://ks-freezer
           predicates:

@@ -10,5 +10,37 @@ spring:
     url: jdbc:mysql://39.107.88.175:3306/kongsang
     username: root
     password: root
+  redis:
+    host: 39.107.88.175
+  mail:
+    host: smtp.qq.com
+    username: dlx-star@qq.com
+    #    出于隐私未填写密码
+    password: ocfqlmbkcpcjbcde
+    properties:
+      mail:
+        smtp:
+          auth: true
+          socketFactory:
+            port: 465
+            class: javax.net.ssl.SSLSocketFactory
+          starttls:
+            enable: true
+            required: true
 server:
   port: 8004
+
+
+mybatis-plus:
+  mapper-locations: classpath:com/ks/member/mapper/xml/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+
+markerhub:
+  jwt:
+    # 加密秘钥
+    secret: f4e2e52034348f86b67cde581c0f9eb5
+    # token有效时长，7天，单位秒
+    expire: 604800
+    header: token
